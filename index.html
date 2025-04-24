@@ -8,11 +8,15 @@
 </head>
 <body>
     <h1>Book Collection</h1>
-   <div id="container"> 
-    <div id="info-container"></div>
-    <button onclick="">Mostrar usuarios</button>
-    <button onclick="">Mostrar libros</button>
-   </div> 
+    <button onclick="mostrarUsuarios()">Mostrar usuarios</button>
+    <button onclick="mostrarLibros()">Mostrar libros</button>
+    <div id="loader" style="display: none;">🔄 Cargando...</div>
+    <div id="message" style="display: none;"></div>
+    <section id="info">
+        <div id="user-div"></div>
+        <div id="book-div"></div>
+        <div id="colection"></div>
+    </section>
 </body>
 <script src="script.js"></script>
 </html>

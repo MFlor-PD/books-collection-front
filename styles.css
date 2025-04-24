@@ -1,0 +1,37 @@
+#loader {
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    margin-top: 20px;
+  }
+  #message {
+    font-size: 16px;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+  }
+  
+  .error {
+    background-color: #ffdddd;
+    color: #a94442;
+    border: 1px solid #a94442;
+  }
+  
+  .success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #155724;
+  }
+  button.verColeccion {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  button.verColeccion:hover {
+    background-color: #45a049;
+  }
