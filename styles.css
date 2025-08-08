@@ -1,37 +1,144 @@
+/* Body y título principal */
+body {
+  background-color: #f0f4f8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 2rem;
+  color: #2c3e50;
+}
+
+h1 {
+  text-align: center;
+  color: #3498db;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+/* loader y mensaje */
 #loader {
-    font-weight: bold;
-    color: #333;
-    text-align: center;
-    margin-top: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+#message {
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.error {
+  background-color: #ffdddd;
+  color: #a94442;
+  border: 1px solid #a94442;
+}
+
+.success {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #155724;
+}
+
+/* Botones */
+
+.button-container {
+  display: flex;
+  justify-content: center; /* centra horizontalmente */
+  gap: 10px; /* separa los botones */
+  margin-top: 20px; /* opcional, para separar de otros elementos */
+}
+button {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin: 0 10px 20px 0;
+  font-size: 16px;
+  transition: background-color 0.3s ease, transform 0.15s ease;
+}
+
+button:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+}
+
+/* Sección info */
+#info {
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Divs dentro de info */
+#user-div, #book-div, #colection {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  flex: 1 1 280px; /* flexible pero no menos de 280px */
+  min-height: 200px;
+  overflow-y: auto;
+  border-radius: 30px;;
+}
+
+/* Títulos dentro de los divs */
+#user-div h2, #book-div h2, #colection h2 {
+  margin-top: 0;
+  color: #34495e;
+  font-weight: 600;
+}
+
+/* Scroll dentro de los divs para listas largas */
+#user-div::-webkit-scrollbar,
+#book-div::-webkit-scrollbar,
+#colection::-webkit-scrollbar {
+  width: 8px;
+}
+
+#user-div::-webkit-scrollbar-thumb,
+#book-div::-webkit-scrollbar-thumb,
+#colection::-webkit-scrollbar-thumb {
+  background-color: rgba(52, 152, 219, 0.6);
+  border-radius: 4px;
+}
+
+img {
+    width: 96px;
+    height: auto;
+    padding: 18px;
+}
+.usercard, .book-card{
+  border: 1px solid grey;
+  border-radius: 30px;
+  padding:20px;
+  margin-bottom: 10px;
+   display: flex;
+  flex-direction: column; /* apila verticalmente */
+  align-items: center;    /* centra horizontalmente */
+}
+
+
+/* Responsive para móvil */
+@media (max-width: 600px) {
+  #info {
+    flex-direction: column;
+    padding: 0 1rem;
   }
-  #message {
-    font-size: 16px;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
+  button {
+    width: 100%;
+    margin-bottom: 15px;
   }
-  
-  .error {
-    background-color: #ffdddd;
-    color: #a94442;
-    border: 1px solid #a94442;
-  }
-  
-  .success {
-    background-color: #d4edda;
-    color: #155724;
-    border: 1px solid #155724;
-  }
-  button.verColeccion {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    margin-top: 10px;
-  }
-  
-  button.verColeccion:hover {
-    background-color: #45a049;
-  }
+}

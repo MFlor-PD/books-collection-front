@@ -32,18 +32,16 @@ async function mostrarUsuarios() {
       data.forEach(({ nombre, apellidos, correo, coleccion, wishlist, id}) => { 
          
          userDiv.innerHTML += `<div class="usercard">
-         <h3>${nombre} ${apellidos}</h3>
-         <p>Correo: ${correo}</p>
-         <p>Email:</p>
-         <p>Coleccion:</p>
+         <h3><strong>${nombre} ${apellidos}</strong></h3>
+         <p><strong>Correo:</strong> ${correo}</p>
+         <p><strong>Coleccion:</strong></p>
          <ul>
             ${coleccion && coleccion.length > 0 ? coleccion.map(libro => `<li>${libro}</li>`).join('') : 'No hay libros en la colección'}
          </ul>
-         <p>Wishlist:</p>
+         <p><strong>Wishlist:</strong></p>
          <ul>
             ${wishlist && wishlist.length > 0 ? wishlist.map(libro => `<li>${libro}</li>`).join('') : 'No hay libros en la wishlist'}
          </ul>
-         <button class="verColeccion" onclick="verColeccion(${id})">Ver Colección</button>
          </div>
          `; 
       });
@@ -72,15 +70,15 @@ async function verColeccion(userId) {
  
      
      const coleccion = data.coleccion;
-     colectionDiv.innerHTML = `<h3>Colección de libros de ${data.nombre}</h3>`;
+     colectionDiv.innerHTML = `<h3><strong>Colección de libros de ${data.nombre}</strong></h3>`;
      
      coleccion.forEach(libro => {
       colectionDiv.innerHTML += `
          <div class="book-card">
-           <h4>${libro.titulo}</h4>
+           <h4><strong>${libro.titulo}</strong></h4>
            <img src="${libro.imagen}" alt="${libro.titulo}">
-           <p>Autor: ${libro.autor}</p>
-           <p>Fecha de Publicación: ${libro.fechaPublicacion}</p>
+           <p><strong>Autor:</strong> ${libro.autor}</p>
+           <p><strong>Fecha de Publicación:</strong> ${libro.fechaPublicacion}</p>
          </div>
        `;
      });
@@ -120,8 +118,8 @@ async function mostrarLibros() {
          <div class="book-card">
          <h3>${titulo}</h3>
          <img src='${imagen}' alt='${titulo}'>
-         <p>Autor: ${autor}</p>
-         <p>Fecha de Publicacion: ${fechaPublicacion}</p>
+         <p><strong>Autor:</strong> ${autor}</p>
+         <p><strong>Fecha de Publicacion:</strong> ${fechaPublicacion}</p>
          </div>
          `;
          
